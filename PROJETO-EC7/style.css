@@ -1,0 +1,171 @@
+@font-face {
+    font-family: hp;
+    src: url('HARRYP__.TTF');
+}
+
+body .navbar {
+    background: #873436;
+}
+
+body .navbar p {
+    font-family: hp;
+    color: white;
+    font-size: xxx-large;
+    margin: auto;
+}
+
+body .navbar .btn-group>.btn:first-child {
+    background: none;
+}
+
+body .navbar .btn:focus {
+    box-shadow: none;
+}
+
+body .navbar .dropdown-toggle::after {
+    display: none;
+}
+
+body .navbar .icon-carrinho {
+    margin: auto;
+}
+
+body .navbar .btn-group img {
+    max-height: 51px;
+    width: auto;
+    margin: auto;
+}
+
+body .navbar .btn-group a {
+    margin: auto;
+}
+
+body .navbar-brand {
+    height: 70px;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body .btn-outline-success {
+    color: white;
+    border-color: white;
+}
+
+body .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+#logo {
+    width: auto;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.icon-carrinho img {
+    height: 50px;
+    width: auto;
+}
+
+#cadastro form label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-family: Roboto, sans-serif;
+    text-transform: uppercase;
+}
+
+#cadastro form {
+    max-width: 500px;
+    margin: auto;
+}
+
+#cadastro form .btn-primary {
+    background: #873436;
+    border: none;
+    width: 100%;
+}
+
+#cadastro,
+#forum {
+    margin-top: 40px;
+}
+
+#cadastro h1,
+#forum h1 {
+    font-family: hp;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: auto
+}
+
+#cadastro .titulo,
+#forum .titulo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#cadastro .titulo img,
+#forum .titulo img {
+    margin-left: 20px;
+    max-height: 80px;
+}
+
+#booksList div h1 {
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#booksList div p.ocultar {
+    display: none;
+}
+
+#booksList div img {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#booksList div {
+    width: calc(70%/3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 56px;
+}
+
+#booksList {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#booksList div button {
+    background-color: #873436;
+    border: none;
+    width: 145px;
+    color: #fff;
+    margin: auto;
+    position: absolute;
+    bottom: 28px;
+}
+
+#booksList div button.btn-comprar {
+    background-color: green;
+    border: none;
+    width: 145px;
+    color: #fff;
+    margin: auto;
+    bottom: 0;
+}
