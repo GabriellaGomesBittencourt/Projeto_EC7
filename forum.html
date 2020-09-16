@@ -4,7 +4,8 @@
 <head>
     <title>Caldeirão furado</title>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/Livraria.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico" />
@@ -78,8 +79,8 @@
         <img data-v-b1739aaa="" src="img/jogo.gif" alt="icon">
         <div class="conteudo-jogo">
             <p class="titulo-jogo">Descubra qual é a sua casa</p>
-            <button>Descobrir</button>
-            <label class="resultado">Grifinoria</label>
+            <button onclick="livraria.harry_potter_head()">Descobrir</button>
+            <label id="resultado"> </label>
         </div>
     </div>
     <footer>

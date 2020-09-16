@@ -3,13 +3,16 @@
 
 <head>
     <title>Caldeirão furado</title>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script src="JS/jquery.min.js"></script>
     <script src="JS/Livraria.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body onload="livraria.harry_potter_news()">
 
     <nav class="navbar navbar-light justify-content-between">
         <a class="navbar-brand" href="index.html">
@@ -93,8 +96,25 @@
         <p class="titulo">Noticias</p>
         <img data-v-b1739aaa="" src="img/noticias.png" alt="icon">
         <div class="conteudo-noticia">
-            <p class="titulo-noticia">Harry Potter Fans Reimagine Their World Without Its Creator</p>
-            <a href="https://www.nytimes.com/2020/06/12/style/jk-rowling-transgender-fans.html?searchResultPosition=3" class="descricao-noticia">Saiba mais + </a>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                    <li data-target="#carousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" id="news">
+
+                </div>
+                <a class="carousel-control-prev noticia-seta" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon " aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next noticia-seta" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -110,6 +130,8 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+    </script>
 </body>
 
 </html>
