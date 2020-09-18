@@ -1,12 +1,13 @@
 var api_key = 'AIzaSyDcvOZV7sFO5cTjqq2oUW6M4zTq97aYkQc';
 var api_news_Key = '2iMweAEJf8vdocUAi7VUYKZa22C8vOXy';
 var url_base_news = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=harryPotter&field-name:("Harry Potter")&api-key=`;
-
+var hp_key = '$2a$10$4Lup07NIucJ3F01MYN37y.h2YHGAPqmMxfE97RgfT7omp9VrSQxHS';
 var url_base = 'https://www.googleapis.com/books/v1/volumes?q=intitle:';
 var url_base_hp = 'https://www.potterapi.com/v1';
 
 var bookslist = []
 var newslist = []
+var characterList = []
 
 var livraria = function() {
 
@@ -16,7 +17,8 @@ var livraria = function() {
             search_books: "search_books",
             booksList: "booksList",
             resultado: "resultado",
-            news: "news"
+            news: "news",
+            teste: "teste"
         };
     }
 
@@ -134,7 +136,63 @@ var livraria = function() {
 
     }
 
+    var harry_potter_character = function(){
+        var request = url_base_hp + '/characters?key=' + hp_key;
+        console.log(request);
 
+        fetch(request)
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                
+                characterList = data;
+                var character = characterList[Math.floor((Math.random() * (characterList.length-1)) + 1)];
+                set_character(character);
+
+            }).catch(function(error) {
+                console.log('Request failed', error);
+        });
+
+
+
+
+    }
+
+    var set_character = function(character){
+        var ul = document.getElementById(controles().teste);
+        var li1 = document.createElement('li');
+        var li2 = document.createElement('li');
+        var li3 = document.createElement('li');
+
+        li1.innerHTML = "Nome: " + character.name;
+        li2.innerHTML = "Função: " + character.role;
+        li3.innerHTML = "Casa: " + character.house;
+
+        ul.appendChild(li1);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+
+    }
+
+    var search_adress = function(){
+        
+        var cep = "09134390"
+        var url_base_cep = `https://viacep.com.br/ws/${cep}/json/`;
+
+        fetch(url_base_cep)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) { 
+            debugger;
+            var endereco = data;
+        }).catch(function(error){
+            console.log('Request failed',error);            
+        });
+
+
+    }
 
     var clearList = function(id_lista) {
         var ul = document.getElementById(id_lista);
@@ -144,7 +202,9 @@ var livraria = function() {
     return {
         search_books: search_books,
         harry_potter_head: harry_potter_head,
-        harry_potter_news: harry_potter_news
+        harry_potter_news: harry_potter_news,
+        harry_potter_character: harry_potter_character,
+        search_adress: search_adress
     };
 
 }();
