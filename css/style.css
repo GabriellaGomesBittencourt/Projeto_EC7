@@ -418,6 +418,7 @@ body .dropdown-menu {
 #carrinho .endereco div p {
     margin-bottom: 0;
     margin-right: 10px;
+    width: 105px
 }
 
 #forum .topico p::before {
@@ -612,7 +613,8 @@ footer .texto p {
     margin-left: 20px;
 }
 
-#jogo .conteudo-jogo #resultado {
+#jogo .conteudo-jogo #resultado,
+#resultadoPersonagem {
     width: 100%;
     font-size: 40px;
     font-family: hp;
@@ -620,4 +622,21 @@ footer .texto p {
     margin-top: 10px;
     position: relative;
     margin-bottom: 0px;
+}
+
+#carrinho .endereco div#numerocasa {
+    display: none;
+    margin-bottom: 20px;
+}
+
+#carrinho .endereco div#numerocasa.visivel {
+    display: flex;
+}
+
+#carrinho .endereco div#complemento {
+    display: none;
+}
+
+#carrinho .endereco div#complemento.visivel {
+    display: flex;
 }

@@ -9,6 +9,13 @@ var bookslist = []
 var newslist = []
 var characterList = []
 
+function manutencao() { alert("Ainda estamos trabalhando nessa função"); }
+
+function compraRealizada() {
+    alert("Compra realizada com sucesso");
+}
+
+
 var livraria = function() {
 
     //Ids dos elementos da tela
@@ -18,7 +25,13 @@ var livraria = function() {
             booksList: "booksList",
             resultado: "resultado",
             news: "news",
-            teste: "teste"
+            resultadoPersonagem: "resultadoPersonagem",
+            rua: "rua",
+            ceplabel: "ceplabel",
+            bairro: "bairro",
+            cidade: "cidade",
+            numerocasa: "numerocasa",
+            complemento: "complemento"
         };
     }
 
@@ -72,6 +85,7 @@ var livraria = function() {
         bloco.appendChild(b);
         var c = document.createElement('button');
         c.className = "btn-comprar";
+        c.addEventListener('click', function() { alert("Ainda estamos trabalhando nessa função"); });
         c.innerHTML = "COMPRAR"
         bloco.appendChild(c);
 
@@ -136,7 +150,7 @@ var livraria = function() {
 
     }
 
-    var harry_potter_character = function(){
+    var harry_potter_character = function() {
         var request = url_base_hp + '/characters?key=' + hp_key;
         console.log(request);
 
@@ -145,51 +159,42 @@ var livraria = function() {
                 return response.json();
             })
             .then(function(data) {
-                
+
                 characterList = data;
-                var character = characterList[Math.floor((Math.random() * (characterList.length-1)) + 1)];
-                set_character(character);
+                var character = characterList[Math.floor((Math.random() * (characterList.length - 1)) + 1)];
+                document.getElementById(controles().resultadoPersonagem).innerHTML = character.name;
 
             }).catch(function(error) {
                 console.log('Request failed', error);
-        });
+            });
 
 
 
 
     }
 
-    var set_character = function(character){
-        var ul = document.getElementById(controles().teste);
-        var li1 = document.createElement('li');
-        var li2 = document.createElement('li');
-        var li3 = document.createElement('li');
 
-        li1.innerHTML = "Nome: " + character.name;
-        li2.innerHTML = "Função: " + character.role;
-        li3.innerHTML = "Casa: " + character.house;
+    var search_adress = function() {
 
-        ul.appendChild(li1);
-        ul.appendChild(li2);
-        ul.appendChild(li3);
-
-    }
-
-    var search_adress = function(){
-        
-        var cep = "09134390"
+        var cep = document.getElementById(controles().ceplabel).value;
+        //console.log(cep);
         var url_base_cep = `https://viacep.com.br/ws/${cep}/json/`;
 
         fetch(url_base_cep)
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) { 
-            debugger;
-            var endereco = data;
-        }).catch(function(error){
-            console.log('Request failed',error);            
-        });
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                // debugger;
+                var endereco = data;
+                document.getElementById(controles().rua).innerHTML = "<strong> Rua: </strong>" + data.logradouro;
+                document.getElementById(controles().bairro).innerHTML = "<strong> Bairro: </strong>" + data.bairro;
+                document.getElementById(controles().cidade).innerHTML = "<strong> Localidade: </strong>" + data.localidade;
+                document.getElementById(controles().numerocasa).className = "visivel";
+                document.getElementById(controles().complemento).className = "visivel";
+            }).catch(function(error) {
+                console.log('Request failed', error);
+            });
 
 
     }

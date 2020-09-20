@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" href="img/favicon.ico" />
+    <script src="JS/Livraria.js"></script>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
                             <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Entrar</button>
+                        <button onclick="manutencao()" type="submit" class="btn btn-primary">Entrar</button>
                     </form>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="cadastro.html">Novo, por aqui? Regitre-se.</a>
@@ -61,19 +62,21 @@
             <div class="form-group">
                 <label for="exampleInputNome">Nome</label>
                 <input type="text" class="form-control" disabled="disabled" id="exampleInputNome" aria-describedby="NomeHelp" placeholder="Nome" value="Hannah">
-                <img style="margin-top: 15px; display: block;" id="imagen" src="img/alterar.png" class="lazy" " title="Download ícone Lapis, listrado, simbolo, para, interface, editar, botões Livre "  alt="ícone lapis, listrado, simbolo, para, interface, editar, botões ">
+                <img onclick="manutencao()" style="margin-top: 15px; display: block;" id="imagen" src="img/alterar.png" class="lazy" " title="Download ícone Lapis, listrado, simbolo, para, interface, editar, botões Livre "  alt="ícone lapis, listrado, simbolo, para,
+                    interface, editar, botões ">
             </div>
             <div class="form-group ">
                 <label for="exampleInputEmail1 ">E-mail</label>
                 <input type="email " class="form-control " disabled="disabled " id="exampleInputEmail1 " aria-describedby="emailHelp " placeholder="E-mail " value="Hannah@gmail.com ">
-                <img style="margin-top: 15px; display: block; " id="imagen " src="img/alterar.png " class="lazy " " title="Download ícone Lapis, listrado, simbolo, para, interface, editar, botões  Livre" alt="ícone lapis, listrado, simbolo, para, interface, editar, botões">
+                <img onclick="manutencao() " style="margin-top: 15px; display: block; " id="imagen " src="img/alterar.png " class="lazy " " title="Download ícone Lapis, listrado, simbolo, para, interface, editar, botões  Livre" alt="ícone lapis, listrado, simbolo, para, interface, editar, botões">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Senha</label>
                 <input type="password" class="form-control" disabled="disabled" id="exampleInputPassword1" placeholder="Senha" value="123456">
-                <img style="margin-top: 15px; display: block;" id="imagen" src="img/alterar.png" class="lazy" " title="Download ícone Lapis, listrado, simbolo, para, interface, editar, botões Livre "  alt="ícone lapis, listrado, simbolo, para, interface, editar, botões ">
+                <img onclick="manutencao()" style="margin-top: 15px; display: block;" id="imagen" src="img/alterar.png" class="lazy" " title="Download ícone Lapis, listrado, simbolo, para, interface, editar, botões Livre "  alt="ícone lapis, listrado, simbolo, para,
+                    interface, editar, botões ">
             </div>
-            <button type="submit " class="btn btn-primary ">SALVAR</button>
+            <button onclick="manutencao() " type="submit " class="btn btn-primary ">SALVAR</button>
         </form>
     </div>
     <footer>
