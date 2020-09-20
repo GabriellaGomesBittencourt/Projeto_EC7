@@ -640,3 +640,22 @@ footer .texto p {
 #carrinho .endereco div#complemento.visivel {
     display: flex;
 }
+
+@media (max-width: 700px) {
+    body .navbar {
+        background: #873436;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        align-items: center;
+    }
+    .navbar .form-inline {
+        width: auto;
+    }
+}
+
+@media (max-width: 349px) {
+    .navbar-light .navbar-brand {
+        zoom: 0.7;
+    }
+}
