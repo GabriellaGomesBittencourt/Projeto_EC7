@@ -157,6 +157,12 @@ body .dropdown-menu {
     width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: Ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    max-height: 97px;
 }
 
 #booksList div p {
@@ -237,6 +243,7 @@ body .dropdown-menu {
     color: white;
     position: relative;
     margin-bottom: 0;
+    padding-right: 74px;
 }
 
 #forum .topico p::after {
@@ -290,6 +297,12 @@ body .dropdown-menu {
 #forum .topico .respostas p span {
     padding: 0 10px;
     font-weight: bold;
+    margin-right: 30px;
+}
+
+#cadastro {
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .navbar .form-inline .form-control {
@@ -326,6 +339,7 @@ body .dropdown-menu {
 
 #carrinho .produtos table th.titulo-qtd {
     text-align: center;
+    padding-right: 30px;
 }
 
 #carrinho .produtos table .quantidade {
@@ -333,6 +347,7 @@ body .dropdown-menu {
     flex-wrap: wrap;
     justify-content: space-evenly;
     position: relative;
+    padding-right: 30px;
 }
 
 #carrinho .produtos table .quantidade button {
@@ -652,10 +667,26 @@ footer .texto p {
     .navbar .form-inline {
         width: auto;
     }
+    #booksList {
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+        padding: 0;
+    }
+    #booksList div {
+        width: 100% !important;
+    }
 }
 
 @media (max-width: 349px) {
     .navbar-light .navbar-brand {
         zoom: 0.7;
+    }
+    #booksList {
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+        padding: 0;
+    }
+    #booksList div {
+        width: 100% !important;
     }
 }
